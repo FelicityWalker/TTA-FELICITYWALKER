@@ -7,4 +7,3 @@ CREATE TABLE player_details (
 	goals INT NOT NULL,
 	assists INT NOT NULL,
 	PRIMARY KEY (player_name));
-    show databases;
