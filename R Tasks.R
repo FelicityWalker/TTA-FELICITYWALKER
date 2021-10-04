@@ -41,11 +41,37 @@ employ.data <- data.frame(name, age, role, length_of_service)
 #3.	Import the GGPLOT 2 library and plot a graph using the qplot function.  X axis is the sequence of 1:20 and the y axis is the x ^2.
 #	Label the graph appropriately. install.packages("ggplot2", dependencies = TRUE)
 library(ggplot2)
-ggplot(data.frame(x=c(1:20)), aes(x)) +
-  stat_function(fun=function(x)x^2, geom="line", aes(colour="square"))
+x <- seq(1:20)
+qplot(x, exp(x))+
+  labs(y="x^2", 
+     x="1:20", 
+     title="qplot") 
 
 #Task 4
 #Create a simple bar plot of five subjects
 
-ggplot(midwest, aes(x=state, y=poptotal))+
-  geom_bar(stat=state, color="red")
+work_hours <- c(8, 7, 2, 5, 9)
+barplot(work_hours)
+
+#Task 5
+#Write a R program to take input from the user (name and age) and display the values.
+my_name<-readline(prompt = "Enter name: ")
+my_age<-readline(prompt="Enter age: " )
+my_name<-as.character(my_name)
+my_age<-as.integer(my_age)
+print(my_name)
+print(my_age)
+
+#Task 6
+#Write a R program to create a sequence of numbers from 20 to 50 and find the mean of numbers from 20 to 50 and sum of numbers.
+x<-c(20:50)
+y<-mean(x)
+z<-sum(x)
+print(y)
+print(z)
+
+#Task 7
+#Write a R program to create a vector which contains 10 random integer values between -50 and +50
+floor(runif(10, min=-50, max=50))
+
+
